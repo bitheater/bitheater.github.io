@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<link href="/css/syntax.css" rel="stylesheet">
+
+<section class="dark">
+    <div class="container">
+        <h2 class="h1" style="margin-bottom: 10px;">{{ page.title }}</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="lead">
+                    <img class="img-circle" src="{{ page.author_image }}" />
+                    {{ page.author | default: 'Bitheater' }}, on {{ page.date | date_to_string }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>    
+<section class="inverse">
+    <div class="container" style="padding-top: 10px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="{{ page.image }}" class="img-responsive" style="margin: 0 auto;" />
+                <div class="post-content">
+                    {{ content }}
+                </div>
+                <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a7c6974d4d59e0012e895af&product=sticky-share-buttons"></script>
+
+                <div id="disqus_thread"></div>
+                <script>
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://bitheater.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+            </div>
+        </div>
+    </div>
+</section>

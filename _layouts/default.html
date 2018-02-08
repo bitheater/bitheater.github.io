@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% capture title %}Bitheater Blog - Software Development{% endcapture %}
+    {% if page.layout == 'post' %}
+        {% capture title %}{{ page.title }} - Bitheater Blog{% endcapture %}
+    {% endif %}
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="https://www.bitheater.co.uk/favicon.ico" type="image/x-icon"/>
+    <meta name="description" content="Software Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="Software Development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bitheater.co.uk/">
+    <meta property="og:image" content="https://www.bitheater.co.uk/img/bitheater.png">
+
+    <link rel="apple-touch-icon" href="https://www.bitheater.co.uk/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://www.bitheater.co.uk/css/style.css">
+    <style>
+        .meta, .image-post {
+            margin-bottom: 10px;
+        }
+        .post-content p, .post-content p:last-of-type {
+            font-size: 18px !important;
+            text-align: justify !important;
+            margin-bottom: 20px !important;
+        }
+        section .container .post-content blockquote p {
+            margin-bottom: 0 !important;
+        }
+        .post-content ul li {
+            font-size: 18px !important;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: [
+                'Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700:latin',
+                'Montserrat:400:latin'
+            ] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://www.bitheater.co.uk" title="Bitheater - Software Development">Bitheater</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs">
+                            <a href="https://www.bitheater.co.uk">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bitheater.co.uk/#about">About us</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bitheater.co.uk/#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bitheater.co.uk/#clients">Clients</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bitheater.co.uk/#team">Team</a>
+                        </li>
+                        <li>
+                            <a href="https://www.bitheater.co.uk/#contact">Contact</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://blog.bitheater.co.uk">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="jumbotron color" style="z-index: 2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1>Software Engineering</h1>
+                    <p><a class="btn btn-primary btn-primary-ghost btn-lg" href="https://bitheater.co.uk/#contact-form" role="button">Contact us to discuss your project</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="https://www.bitheater.co.uk/img/heater.png" alt="bitheater" class="img-responsive" style="margin-left:40%;box-shadow: none; padding-top:8px; margin-bottom:-109px; z-index:1">
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ content }}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>&copy; {{ 'now' | date: "%Y" }} Bitheater Ltd.</p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.facebook.com/bitheater" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/bitheater" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/bitheater" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.bitheater.co.uk/js/scripts.js"></script>
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-58082507-1','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

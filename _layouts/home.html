@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<style>
+    section .container.small {
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+    }
+    .short-description {
+        font-size: 16px;
+    }
+</style>
+
+<section id="about" class="dark text-center">
+    <div class="container">
+        <h2 class="h1">Our latest posts</h2>
+    </div>
+</section>
+{% for post in site.posts %}
+    <section class="inverse">
+        <div class="container small">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="h1">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <div class="meta">
+                        <img class="img-circle" src="{{ post.author_image }}" style="margin-right: 7px;" />
+                        {{ post.author | default: 'Bitheater' }}, on {{ post.date | date_to_string }}
+                    </div>
+                    <a href="{{ post.url }}">
+                        <img src="{{ post.image }}" class="image-post img-responsive" />
+                    </a>
+                    <p class="short-description">{{ post.short_description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
