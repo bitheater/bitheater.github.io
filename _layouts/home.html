@@ -1,39 +1,8 @@
 ---
 layout: default
 ---
-<style>
-    section .container.small {
-        padding-top: 10px !important;
-        padding-bottom: 20px !important;
-    }
-    .short-description {
-        font-size: 16px;
-    }
-</style>
-
-<section id="about" class="dark text-center">
-    <div class="container">
-        <h2 class="h1">Our latest posts</h2>
-    </div>
+<section class="wrap blog-intro"><p class="eyebrow">FROM BITHEATER</p><h1>Software notes, kept useful.</h1><p class="intro">Our engineering archive, alongside what we are building today.</p></section>
+<section class="wrap blog-list" aria-label="Engineering notes">
+  <aside class="blog-pilot" aria-labelledby="pilot-title"><p class="eyebrow">CURRENT PRODUCT PILOT</p><h2 id="pilot-title">Compare supplier quotes with Quote Ledger.</h2><p>Review proposed values against source excerpts, check missing costs and export a comparison to Excel. The early pilot is free.</p><a class="button primary" href="https://www.aifly.click/quote-ledger/#example">Try the fictional example</a></aside>
+  {% for post in site.posts %}<article class="blog-card"><p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }}</time> | {{ post.author | default: 'BitHeater' | escape }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><p>{{ post.short_description | escape }}</p><p class="subtle">From the archive. Versions and setup instructions reflect the publication date.</p></article>{% endfor %}
 </section>
-{% for post in site.posts %}
-    <section class="inverse">
-        <div class="container small">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="h1">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h2>
-                    <div class="meta">
-                        <img class="img-circle" src="{{ post.author_image }}" style="margin-right: 7px;" />
-                        {{ post.author | default: 'Bitheater' }}, on {{ post.date | date_to_string }}
-                    </div>
-                    <a href="{{ post.url }}">
-                        <img src="{{ post.image }}" class="image-post img-responsive" />
-                    </a>
-                    <p class="short-description">{{ post.short_description }}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-{% endfor %}
