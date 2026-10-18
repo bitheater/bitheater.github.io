@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<section class="wrap blog-intro"><p class="eyebrow">FROM BITHEATER</p><h1>Software notes, kept useful.</h1><p class="intro">Our engineering archive, alongside what we are building today.</p></section>
-<section class="wrap blog-list" aria-label="Engineering notes">
-  <aside class="blog-pilot" aria-labelledby="pilot-title"><p class="eyebrow">CURRENT PRODUCT PILOT</p><h2 id="pilot-title">Compare supplier quotes with Quote Ledger.</h2><p>Review proposed values against source excerpts, check missing costs and export a comparison to Excel. The early pilot is free.</p><a class="button primary" href="https://www.aifly.click/quote-ledger/#example">Try the fictional example</a></aside>
+<section class="wrap blog-intro">
+  <div><p class="eyebrow">FROM BITHEATER</p><h1>Engineering archive.</h1><p class="intro">Notes from earlier projects, kept here for reference. Each article reflects the tools and approaches used at the time.</p><p>For what we are building now, visit <a href="https://www.bitheater.co.uk/">BitHeater</a> or follow our <a href="https://www.linkedin.com/company/bitheater/">company page on LinkedIn</a>.</p></div>
+  <a class="archive-character" href="https://www.bitheater.co.uk/" aria-label="Visit the BitHeater consulting website"><img src="{{ '/assets/character-still.png' | relative_url }}" alt="BitHeater's smiling pixel character wearing a dark suit and red scarf" width="690" height="1010"></a>
+</section>
+<section class="wrap blog-list" aria-label="Archived engineering articles">
   {% for post in site.posts %}<article class="blog-card"><p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }}</time> | {{ post.author | default: 'BitHeater' | escape }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2><p>{{ post.short_description | escape }}</p><p class="subtle">From the archive. Versions and setup instructions reflect the publication date.</p></article>{% endfor %}
 </section>
