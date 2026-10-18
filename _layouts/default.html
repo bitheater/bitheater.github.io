@@ -13,15 +13,16 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/css/syntax.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/logo.png' | relative_url }}">
   {% feed_meta %}
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="BitHeater Notes home"><span class="brand-mark" aria-hidden="true">B</span>BitHeater Notes</a>
-    <nav aria-label="Main navigation"><a href="https://www.bitheater.co.uk/">BitHeater</a><a href="https://www.aifly.click/quote-ledger/">Quote Ledger</a><a href="mailto:info@bitheater.co.uk">Contact</a></nav>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="BitHeater engineering archive home"><img class="brand-logo" src="{{ '/assets/logo.png' | relative_url }}" alt="BitHeater" width="419" height="379"><span>Engineering archive</span></a>
+    <nav aria-label="Main navigation"><a href="https://www.bitheater.co.uk/#services">Consulting</a><a href="https://www.bitheater.co.uk/#products">Products</a><a href="https://www.linkedin.com/company/bitheater/">LinkedIn</a><a href="mailto:info@bitheater.co.uk">Contact</a></nav>
   </header>
   <main id="main">{{ content }}</main>
-  <footer class="wrap site-footer"><div><strong>BitHeater</strong><p>Software engineering and practical tools.</p></div><p><a href="https://www.bitheater.co.uk/">Main website</a><br><a href="mailto:info@bitheater.co.uk">info@bitheater.co.uk</a></p></footer>
+  <footer class="wrap site-footer"><div><strong>BitHeater</strong><p>Software consulting, automation and products in development.</p></div><p><a href="https://www.bitheater.co.uk/">Main website</a><br><a href="mailto:info@bitheater.co.uk">info@bitheater.co.uk</a></p></footer>
 </body>
 </html>
